@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>Neue Vorstellung hinzufügen:</h1>
+
+<form method="post" th:action = "@{/addVorstellung}" th:object = "${vorstellung}" class="mb-3">
+  <label>VorstellungsIdID</label>
+  <input type="number" id="vId" th:field="*{vId}" required="required" class="form-control">
+  <br>
+  <label>Datum</label>
+  <input type="date" id="datum" th:field="*{datum}" required="required" class="form-control">
+  <br>
+  <label>Uhrzeit</label>
+  <input type="time" id="uhrzeit" th:field="*{uhrzeit}" required="required" class="form-control">
+  <br>
+  <label>Saalname</label>
+  <input type="text" id="saalname" th:field="*{saalname}" required="required" class="form-control">
+  <br>
+  <label>FilmId</label>
+  <input type="number" id="filmId" th:field="*{filmId}" required="required" class="form-control">
+  <br>
+  <button type="submit" name="btnSubmit" value="submit" class="btn btn-primary mb-3">Vorstellung hinzufügen</button>
+</form>
+
+</body>
+</html>
