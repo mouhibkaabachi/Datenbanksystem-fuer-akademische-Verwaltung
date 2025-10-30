@@ -1,0 +1,1 @@
+# Datenbanksystem-fuer-akademische-Verwaltung
